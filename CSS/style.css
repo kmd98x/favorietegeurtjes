@@ -12,8 +12,13 @@ nav ul {
     display: flex;
     list-style-type: none;
     gap: 4em;
+    justify-content: center;
+	margin: 0;
+    padding: 0;
 }
+
 nav ul li a {
+    text-transform: uppercase;
     text-decoration: none;
     color: #f5f5db;
     text-align: center;
@@ -21,6 +26,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+
+    font-size: 1.1em;
 
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -34,4 +41,16 @@ nav ul li a:hover {
     to {
         text-shadow: 0 0 20px #fff, 0 0 30px #588fd3, 0 0 40px #588fd3, 0 0 50px #588fd3, 0 0 60px #588fd3, 0 0 70px #588fd3, 0 0 80px #588fd3;
     }
+}
+
+header section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+header section img{
+    width: 30em;
+   
 }
