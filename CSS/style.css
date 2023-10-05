@@ -1,12 +1,24 @@
+
 body {
     color: #f5f5db;
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 53%, rgba(21, 38, 66, 1) 100%);
 }
 
+
 h1 {
+    color: gold;
     text-align: center;
+    animation: h1animation 4s ease-in-out;
+
 }
+
+@keyframes h1animation {
+    0% { color:#f5f5db; font-size: 3.5em;}
+    100% {color: gold; font-size: 2em ;}
+    
+}
+
 
 nav ul {
     display: flex;
@@ -20,30 +32,30 @@ nav ul {
 nav ul li a {
     text-transform: uppercase;
     text-decoration: none;
-    color: #f5f5db;
+    color: gold;
     text-align: center;
-
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
 
     font-size: 1.1em;
-
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1218c5, 0 0 40px #1218c5, 0 0 50px #1218c5, 0 0 60px #1218c5, 0 0 70px#1218c5;
+/* https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3438a6, 0 0 40px #3438a6, 0 0 50px #3438a6, 0 0 60px #3438a6, 0 0 70px#3438a6;
     }
 
-    to {
+    100% {
         text-shadow: 0 0 20px #fff, 0 0 30px #588fd3, 0 0 40px #588fd3, 0 0 50px #588fd3, 0 0 60px #588fd3, 0 0 70px #588fd3, 0 0 80px #588fd3;
     }
 }
 
+
+/* https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/ */
 header section {
     display: flex;
     justify-content: center;
@@ -52,8 +64,34 @@ header section {
 }
 
 header section img {
-    width: 30em;
+    width: 12em;
+    animation: fotoanimation 3s;
+    animation-fill-mode: backwards;
+}
 
+header section img:nth-of-type(1){
+    margin-right: -2em;
+    animation-delay: 0.5s;
+    
+}
+
+header section img:nth-of-type(3){
+    margin-left: -2em;
+    animation-delay: 1.5s;
+    
+}
+
+header section img:nth-of-type(2){
+    /* +2 omdat het voor de 2 andere moet komen */
+    z-index: 1;
+    margin-right: -2em;
+    animation-delay: 2.5s;
+    
+}
+
+@keyframes fotoanimation {
+    0% {opacity: 0; filter:blur(0.3em);}
+    100% {opacity: 1; filter:blur(0);}
 }
 
 header section img:hover{
@@ -68,16 +106,19 @@ main {
     text-align: justify;
 }
 
-main section ol{
+main section ul{
+    list-style: none;
     display: flex;
+    justify-content: center;
     gap:4em;
 }
-main section ol li img{
+main section ul li img{
     max-width: 7em;
+    transition: 0.9s;
 
 }
-    
 
-main section ol li img:hover{
-    border: solid rebeccapurple;
+main section ul li img:hover{
+    transform: scale(1.1);
+
 }
