@@ -122,3 +122,33 @@ main section ul li img:hover{
     transform: scale(1.1);
 
 }
+
+footer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: gold;
+}
+
+footer form input{
+    padding: 1em;
+    width: 19em;
+    border: gold solid .1em;
+    background-color: transparent;
+    color:#f5f5db;
+
+}
+
+footer form input:focus{
+    box-shadow: 0em 0em 1em gold;
+    outline: none;
+}
+
+footer button{
+    color: gold;
+    border: gold solid 0.1em;
+    background-color: transparent;
+    padding: 0.8em 2em;
+}
