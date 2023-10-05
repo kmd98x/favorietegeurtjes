@@ -4,7 +4,7 @@ body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 53%, rgba(21, 38, 66, 1) 100%);
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
@@ -13,7 +13,7 @@ nav ul {
     list-style-type: none;
     gap: 4em;
     justify-content: center;
-	margin: 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -22,7 +22,7 @@ nav ul li a {
     text-decoration: none;
     color: #f5f5db;
     text-align: center;
-    
+
 }
 
 nav ul li a:hover {
@@ -31,7 +31,8 @@ nav ul li a:hover {
 
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate; }
+    animation: glow 1s ease-in-out infinite alternate;
+}
 
 @-webkit-keyframes glow {
     from {
@@ -44,13 +45,39 @@ nav ul li a:hover {
 }
 
 header section {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-header section img{
+header section img {
     width: 30em;
-   
+
+}
+
+header section img:hover{
+    scale: (1.2);
+}
+
+main {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+    text-align: justify;
+}
+
+main section ol{
+    display: flex;
+    gap:4em;
+}
+main section ol li img{
+    max-width: 7em;
+
+}
+    
+
+main section ol li img:hover{
+    border: solid rebeccapurple;
 }
