@@ -500,3 +500,25 @@ footer p {
     text-shadow: 0em 0em 1em white;
     box-shadow: 0em 0em 1em rgba(255, 217, 0, 0.664);
 } 
+
+
+
+
+
+
+/* 5E PAGINA BRONNEN */
+
+
+.bronnen main{
+    display: grid; 
+    grid-template-columns: repeat(4,1fr);
+    gap:4em;
+    margin:3em auto 0;
+    max-width: 60em;
+}
+
+.bronnen main section{
+    border: solid .1em white;
+    
+}
+
