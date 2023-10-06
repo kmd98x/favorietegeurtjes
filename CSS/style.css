@@ -353,24 +353,22 @@ footer p {
 /* DERDE PAGINA MONTALE */
 
 
-
-
+/*  3e pagina een breedte geven */
 .derde main{
     max-width: 45em;
 }
+
+/* ruimte tussen de parfum fotos,dus tussen de section */
 .derde main section {
     margin-bottom: 3em;
-    /* display: flex;
-    justify-content: center;
-    text-align: center; */
 }
 
-
+/* de 3 parfums een grootte geven */
 .derde main section > img{
-    max-width: 10em;
+    max-width: 13em;
 }
 
-
+/* instagram logo montale */
 .derde footer a {
     animation-delay: 1.5s;
     color: #f5f5db;
@@ -380,20 +378,24 @@ footer p {
     align-items: center;
 }
 
+/* instagram logo montale */
 .derde footer a:hover{
     text-shadow: 0em 0em 1em white;
 
 } 
 
+/* instagram logo montale */
 .derde footer a img {
     max-width: 4em;
 }
 
+/* shopping bag icon bewerken */
 .derde section a img{
     width: 1.5em;
     padding-left: 1em;
 }
 
+/* geen echte button, maar wou het een go to actie geven.button bewerkingen van het  koop deze buton */
 .derde section a {
     animation-delay: 1.5s;
     color: #f5f5db;
@@ -412,10 +414,89 @@ footer p {
     box-shadow: 0em 0em 1em rgba(255, 217, 0, 0.664);
 } 
 
-/* Direct child. section is een kind van section */
+/* Direct child. section is een kind van section en maakt kolommen zodat het naast elkaar komt*/
 .derde main > section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
 
 }
+
+
+
+
+/*VIERDE PAGINA TRUSSARDI */
+
+
+
+/* instagram logo trussardi */
+.vierde footer a {
+    animation-delay: 1.5s;
+    color: #f5f5db;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* instagram logo trussardi */
+.vierde footer a:hover{
+    text-shadow: 0em 0em 1em white;
+
+} 
+
+/* instagram logo trussardi */
+.vierde footer a img {
+    max-width: 4em;
+}
+
+/* 4e pagina een breedte geven */
+.vierde main{
+    width: 70em;
+}
+
+/* 1e section kolommen maken */
+.vierde main > section{
+    
+    align-items: center;
+    display: grid;
+    gap:5em;
+    margin-top: 5em;
+    /* repeat= 1e hoevaak herhalen, 2e is hoeveel kolommen */
+    grid-template-columns: repeat(2,1fr);
+}
+
+/* 1e section alleen de fotos dus werk met nth type */
+.vierde main > section:nth-of-type(1) img{
+    max-width: 20em;
+}
+
+.vierde main > section:nth-of-type(2) img{
+    max-width: 30em;
+}
+
+.vierde section section a img{
+    width: 1.5em;
+    padding-left: 1em;
+}
+
+/* geen echte button, maar wou het een go to actie geven.button bewerkingen van het  koop deze buton */
+.vierde section section a {
+    animation-delay: 1.5s;
+    color: #f5f5db;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 0.1em gold;
+    width:11em;
+    padding: 0.5em;
+    transition: 0.4s;
+    margin:auto;
+   
+}
+
+.vierde section section a:hover{
+    text-shadow: 0em 0em 1em white;
+    box-shadow: 0em 0em 1em rgba(255, 217, 0, 0.664);
+} 
