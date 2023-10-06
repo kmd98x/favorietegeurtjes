@@ -173,3 +173,106 @@ footer p{
     opacity: 0.5;
     text-align: right;
 }
+
+
+
+
+
+/* TWEEDE PAGINE ELIE SAAB */
+
+
+
+/* Slideshow code source: https://www.w3.org/Style/Examples/007/slideshow.en.html */
+
+.tweede main ul {
+    list-style: none;
+    height: 35em;
+    width: 23em;
+    /* dit is de parent en houdt de afbeeldingen in de container/zn plek (ul) */
+    position: relative;
+    margin: auto;
+    padding: 0;
+    /* alles wat buiten de container valt, niet laten weergeven. Als je het niet deed, kwam het onder de text*/
+    overflow: hidden;
+}
+
+
+.tweede main ul li {
+    opacity: 0;
+    position: absolute;
+    animation: 12s autoplay-slideshow infinite;
+}
+
+.tweede main ul img {
+    height: 35em;
+}
+
+.tweede main ul li:nth-child(1) {
+    animation-delay: 0s
+}
+
+.tweede main ul li:nth-child(2) {
+    animation-delay: 4s
+}
+
+.tweede main ul li:nth-child(3) {
+    animation-delay: 8s
+}
+
+@keyframes autoplay-slideshow {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+}
+
+/* text animation. Eerste p geldt voor alle p's dus ded delay, animatie duur enz, en dan nadat ga je de andere p's bewerken. Dus apart een delay toevoegen */
+
+.tweede p , .tweede section a{
+    animation-duration: 1s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+      
+  @keyframes animate-fade {
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .tweede p:nth-of-type(1) {
+    animation-delay: 0.6s;
+  }
+      
+  .tweede p:nth-of-type(2) {
+    animation-delay: 0.9s;
+  }
+      
+  .tweede p:nth-of-type(3){
+    animation-delay: 1.2s;
+  }
+
+  .tweede section a {
+    animation-delay: 1.5s;
+    color:  #f5f5db ;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .tweede section a img{
+    max-width: 8em;
+  }
+
+  
