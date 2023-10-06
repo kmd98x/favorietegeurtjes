@@ -1,4 +1,3 @@
-
 body {
     color: #f5f5db;
     background: rgb(0, 0, 0);
@@ -14,12 +13,19 @@ h1 {
 }
 
 @keyframes h1animation {
-    0% { color:#f5f5db; font-size: 3.5em;}
-    100% {color: gold; font-size: 2em ;}
-    
+    0% {
+        color: #f5f5db;
+        font-size: 3.5em;
+    }
+
+    100% {
+        color: gold;
+        font-size: 2em;
+    }
+
 }
 
-nav{
+nav {
     margin-top: 1em;
 }
 
@@ -59,6 +65,7 @@ nav ul li a:hover {
 
 
 /* https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/ */
+/* mijn header is een component want hij wordt op meerdere pagina's gebruikt met dezelfde styling */
 header section {
     display: flex;
     justify-content: center;
@@ -72,69 +79,80 @@ header section img {
     animation-fill-mode: backwards;
 }
 
-header section img:nth-of-type(1){
+header section img:nth-of-type(1) {
     margin-right: -2em;
     animation-delay: 0.5s;
-    
+
 }
 
-header section img:nth-of-type(3){
+header section img:nth-of-type(3) {
     margin-left: -2em;
     animation-delay: 1.5s;
-    
+
 }
 
-header section img:nth-of-type(2){
+header section img:nth-of-type(2) {
     /* +2 omdat het voor de 2 andere moet komen */
     z-index: 1;
     margin-right: -2em;
     animation-delay: 2.5s;
-    
+
 }
 
 @keyframes fotoanimation {
-    0% {opacity: 0; filter:blur(0.3em);}
-    100% {opacity: 1; filter:blur(0);}
+    0% {
+        opacity: 0;
+        filter: blur(0.3em);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
 }
 
-header section img:hover{
+header section img:hover {
     scale: (1.2);
 }
 
 main {
+    max-width: 80em;
+    margin: 3em auto 4em;
+}
+
+.eerste main , .tweede main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4em;
-    max-width: 80em;
-    margin:3em auto 4em;
 }
-
-main p{
+.eerste main p {
     text-align: justify;
 }
 
-main section ul{
+.eerste main section ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap:4em;
+    gap: 4em;
 }
-main section ul li img{
+
+.eerste main section ul li img {
     max-width: 7em;
     transition: 0.9s;
 
 }
 
-main section ul li img:hover{
+.eerste main section ul li img:hover {
     transform: scale(1.1);
 }
 
-footer{
+/* mijn footer is ook een component */
+footer {
     max-width: 80em;
-    margin:auto;
+    margin: auto;
 }
 
-footer form{
+footer form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,32 +161,32 @@ footer form{
     color: gold;
 }
 
-footer form input{
+footer form input {
     padding: 1em;
     width: 19em;
     border: gold solid .1em;
     background-color: transparent;
-    color:#f5f5db;
+    color: #f5f5db;
 
 }
 
-footer form input:focus{
+footer form input:focus {
     box-shadow: 0em 0em 1em gold;
     outline: none;
 }
 
-footer button{
+footer button {
     color: gold;
     border: gold solid 0.1em;
     background-color: transparent;
     padding: 0.8em 2em;
 }
 
-footer button:active{
+footer button:active {
     box-shadow: 0em 0em 1em gold;
 }
 
-footer p{
+footer p {
     color: gold;
     opacity: 0.5;
     text-align: right;
@@ -238,41 +256,50 @@ footer p{
 
 /* text animation. Eerste p geldt voor alle p's dus ded delay, animatie duur enz, en dan nadat ga je de andere p's bewerken. Dus apart een delay toevoegen */
 
-.tweede p , .tweede section a{
+.tweede p,
+.tweede section a {
     animation-duration: 1s;
     animation-name: animate-fade;
     animation-delay: 0.5s;
     animation-fill-mode: backwards;
-  }
-      
-  @keyframes animate-fade {
-      0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  .tweede p:nth-of-type(1) {
-    animation-delay: 0.6s;
-  }
-      
-  .tweede p:nth-of-type(2) {
-    animation-delay: 0.9s;
-  }
-      
-  .tweede p:nth-of-type(3){
-    animation-delay: 1.2s;
-  }
+}
 
-  .tweede section a {
+@keyframes animate-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tweede p:nth-of-type(1) {
+    animation-delay: 0.6s;
+}
+
+.tweede p:nth-of-type(2) {
+    animation-delay: 0.9s;
+}
+
+.tweede p:nth-of-type(3) {
+    animation-delay: 1.2s;
+}
+
+.tweede section a {
     animation-delay: 1.5s;
-    color:  #f5f5db ;
+    color: #f5f5db;
     text-decoration: none;
     display: flex;
     align-items: center;
 
-  }
+}
 
-  .tweede section a img{
+.tweede section a img {
     max-width: 8em;
-  }
+}
 
-  
+.derde main section {
+    display: flex;
+
+}
