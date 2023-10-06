@@ -1,3 +1,4 @@
+/* heel website body kleur geven */
 body {
     color: #f5f5db;
     background: rgb(0, 0, 0);
@@ -5,13 +6,14 @@ body {
     animation: fadepage 5s;
 }
 
+/* hele website bij elke pagina een fade geven als je erop komt */
 @keyframes fadepage {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
 
 
-
+/* h1 animatie geven */
 h1 {
     color: gold;
     text-align: center;
@@ -32,6 +34,7 @@ h1 {
 
 }
 
+/* navigatie balk goed ordenen */
 nav {
     margin-top: 1em;
 }
@@ -59,6 +62,7 @@ nav ul li a:hover {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
+/* text in mijn nav een glow geven */
 /* https://www.w3schools.com/howto/howto_css_glowing_text.asp */
 @keyframes glow {
     0% {
@@ -73,6 +77,7 @@ nav ul li a:hover {
 
 /* https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/ */
 /* mijn header is een component want hij wordt op meerdere pagina's gebruikt met dezelfde styling */
+
 header div {
     display: flex;
     justify-content: center;
@@ -80,6 +85,7 @@ header div {
 
 }
 
+/* de 3 fotos laten animeren */
 header div img {
     width: 12em;
     animation: fotoanimation 3s;
@@ -261,10 +267,9 @@ footer p {
     }
 }
 
-/* text animation. Eerste p geldt voor alle p's dus ded delay, animatie duur enz, en dan nadat ga je de andere p's bewerken. Dus apart een delay toevoegen */
+/* text animation. Eerste p geldt voor alle p's dus ded delay, animatie duur enz, en dan nadat ga je de andere p's bewerken. Dus apart een delay toevoegen. dit zorgt ervoor dat het 1 voor 1 komt*/
 
-.tweede p,
-.tweede div a {
+.tweede p, .tweede div a {
     animation-duration: 1s;
     animation-name: animate-fade;
     animation-delay: 0.5s;
@@ -293,46 +298,78 @@ footer p {
     animation-delay: 1.2s;
 }
 
-.tweede div a {
+/* koop deze knopw eliesaab */
+.tweede main div a img{
+    width: 1.5em;
+    padding-left: 1em;
+}
+
+.tweede main div a {
+    margin: auto;
     animation-delay: 1.5s;
     color: #f5f5db;
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border: solid 0.1em gold;
+    width: 11em;
+    padding: 0.5em;
+    transition: 0.4s;
 }
 
-.tweede div a:hover{
+.tweede main div a:hover{
+    text-shadow: 0em 0em 1em white;
+    box-shadow: 0em 0em 1em rgba(255, 217, 0, 0.664);
+} 
+
+
+/* instagram volgen elie saab */
+
+.tweede footer a {
+    margin: auto;
+    animation-delay: 1.5s;
+    color: #f5f5db;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tweede footer a:hover{
     text-shadow: 0em 0em 1em gold;
     color: gold;
 
 } 
 
-.tweede div a img {
+.tweede footer a img {
     max-width: 4em;
 }
 
 
 
+
+
 /* DERDE PAGINA MONTALE */
+
+
+
 
 .derde main{
     max-width: 45em;
 }
-.derde main div {
+.derde main section {
     margin-bottom: 3em;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: center; */
 }
 
 
-.derde main div img{
+.derde main section > img{
     max-width: 10em;
 }
 
-.derde main div img:hover{
-    transform: scale(1.2);
-}
 
 .derde footer a {
     animation-delay: 1.5s;
