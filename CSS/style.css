@@ -298,10 +298,6 @@ footer p {
     animation-delay: 1.2s;
 }
 
-.tweede p:nth-of-type(3) {
-    animation-delay: 1.5s;
-}
-
 /* koop deze knopw eliesaab */
 .tweede main section a img{
     width: 1.5em;
@@ -309,7 +305,7 @@ footer p {
 }
 
 .tweede main section a {
-    margin: auto;
+    margin-top: 1.3em;
     animation-delay: 1.5s;
     color: #f5f5db;
     text-decoration: none;
@@ -341,13 +337,12 @@ footer p {
 }
 
 .tweede footer a:hover{
-    text-shadow: 0em 0em 1em gold;
-    color: gold;
+    text-shadow: 0em 0em 1em white;
 
 } 
 
 .tweede footer a img {
-    max-width: 4em;
+    max-width: 3em;
 }
 
 
@@ -407,7 +402,7 @@ footer p {
 
 /* instagram logo montale */
 .derde footer a img {
-    max-width: 4em;
+    max-width: 3em;
 }
 
 /* shopping bag icon bewerken */
@@ -432,7 +427,7 @@ footer p {
 
 .derde section a:hover{
     text-shadow: 0em 0em 1em white;
-    box-shadow: 0em 0em 1em rgba(255, 217, 0, 0.664);
+    box-shadow: 0em 0em 1em rgba(255, 217, 0, 0.664)
 } 
 
 /* Direct child. section is een kind van section en maakt kolommen zodat het naast elkaar komt*/
@@ -468,7 +463,7 @@ footer p {
 
 /* instagram logo trussardi */
 .vierde footer a img {
-    max-width: 4em;
+    max-width: 3em;
 }
 
 /* 4e pagina een breedte geven */
