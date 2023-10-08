@@ -269,7 +269,7 @@ footer p {
 
 /* text animation. Eerste p geldt voor alle p's dus ded delay, animatie duur enz, en dan nadat ga je de andere p's bewerken. Dus apart een delay toevoegen. dit zorgt ervoor dat het 1 voor 1 komt*/
 
-.tweede p, .tweede div a {
+.tweede p, .tweede section a ,.tweede h2{
     animation-duration: 1s;
     animation-name: animate-fade;
     animation-delay: 0.5s;
@@ -286,25 +286,29 @@ footer p {
     }
 }
 
-.tweede p:nth-of-type(1) {
+.tweede h2{
     animation-delay: 0.6s;
-}
 
-.tweede p:nth-of-type(2) {
+}
+.tweede p:nth-of-type(1) {
     animation-delay: 0.9s;
 }
 
-.tweede p:nth-of-type(3) {
+.tweede p:nth-of-type(2) {
     animation-delay: 1.2s;
 }
 
+.tweede p:nth-of-type(3) {
+    animation-delay: 1.5s;
+}
+
 /* koop deze knopw eliesaab */
-.tweede main div a img{
+.tweede main section a img{
     width: 1.5em;
     padding-left: 1em;
 }
 
-.tweede main div a {
+.tweede main section a {
     margin: auto;
     animation-delay: 1.5s;
     color: #f5f5db;
@@ -318,7 +322,7 @@ footer p {
     transition: 0.4s;
 }
 
-.tweede main div a:hover{
+.tweede main section a:hover{
     text-shadow: 0em 0em 1em white;
     box-shadow: 0em 0em 1em rgba(255, 217, 0, 0.664);
 } 
@@ -363,10 +367,27 @@ footer p {
     margin-bottom: 3em;
 }
 
-/* de 3 parfums een grootte geven */
+/* de 3 parfums een grootte geven en animation */
 .derde main section > img{
     max-width: 13em;
+    animation: zweefparfum 3s infinite;
+    animation-delay: 0.5;
 }
+
+@keyframes zweefparfum{
+    0% {transform: translateY(0) ;}
+    50% {transform: translateY(1em) ;}
+    100% {transform: translateY(0) ;}
+}
+
+.derde main section:nth-of-type(2) > img{
+    animation-delay: 0.8s;
+}
+
+.derde main section:nth-of-type(3) > img{
+    animation-delay: 1.6s;
+}
+
 
 /* instagram logo montale */
 .derde footer a {
